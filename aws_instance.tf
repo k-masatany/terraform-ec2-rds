@@ -30,6 +30,8 @@ resource "aws_instance" "main" {
     Description = "This resource was created through Terraform"
   }
 
+  user_data = "${data.template_file.userdata.rendered}"
+
   lifecycle {
     ignore_changes = [
       "availability_zone"
