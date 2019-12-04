@@ -6,7 +6,7 @@ terraform {
   required_version = "~> 0.12.9"
 
   backend "s3" {
-    bucket = "k-masatany-terraform-backend"
+    bucket = "your state bucket"
     key    = "terraform-sample-02.tfstate"
     region = "ap-northeast-1"
   }
